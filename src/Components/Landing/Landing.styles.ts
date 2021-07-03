@@ -24,7 +24,7 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
     margin: 0;
-    font-size: clamp(5rem, 10vw, 10rem);
+    font-size: clamp(4rem, 8vw, 10rem);
     background: url(${process.env.PUBLIC_URL}/Images/Circles.png);
     background-clip: text;
     animation: animateTitle 20s linear infinite;
@@ -41,6 +41,6 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h2`
-    color: ${Theme.light.text};
-    font-size: clamp(1.25rem, 2vw, 4rem);
+    color: ${Theme.dark.disabled};
+    font-size: clamp(1.25rem, 2vw, 3rem);
 `;

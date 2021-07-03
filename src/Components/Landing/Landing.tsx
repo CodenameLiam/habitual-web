@@ -8,7 +8,7 @@ import * as Styles from './Landing.styles';
 const Landing: FC = () => {
     return (
         <Styles.Section>
-            <Sparkles />
+            {/* <Sparkles /> */}
 
             <Styles.Container>
                 <Reveal keyframes={fadeUp} triggerOnce duration={1000}>
