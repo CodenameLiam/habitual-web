@@ -9,15 +9,25 @@ export const Section = styled.section`
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background-color: ${Theme.dark.background};
+    background-color: ${Theme.light.background};
+`;
+
+export const Container = styled.div`
+    display: flex;
+    z-index: 999;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: ${Theme.light.background};
+    box-shadow: 0 0px 50px 50px ${Theme.light.background};
 `;
 
 export const Title = styled.h1`
     margin: 0;
     font-size: clamp(5rem, 10vw, 10rem);
-    background: url(${process.env.PUBLIC_URL}/test.png);
+    background: url(${process.env.PUBLIC_URL}/Images/Circles.png);
     background-clip: text;
-    animation: animateTitle 30s linear infinite;
+    animation: animateTitle 20s linear infinite;
     -webkit-text-fill-color: transparent;
 
     @keyframes animateTitle {
@@ -31,6 +41,6 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h2`
-    color: ${Theme.dark.text};
-    font-size: clamp(2rem, 2vw, 4rem);
+    color: ${Theme.light.text};
+    font-size: clamp(1.25rem, 2vw, 4rem);
 `;
