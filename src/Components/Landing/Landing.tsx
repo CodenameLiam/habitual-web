@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Reveal from 'react-awesome-reveal';
 import { fadeUp } from '../../Styles/Animations';
 import FlipText from '../FlipText/FlipText';
-import { Sparkles } from '../Sparkles/Sparkles';
+// import { Sparkles } from '../Sparkles/Sparkles';
 import * as Styles from './Landing.styles';
 
 const Landing: FC = () => {
