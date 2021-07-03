@@ -20,6 +20,7 @@ export const Container = styled.div`
     align-items: center;
     background-color: ${Theme.light.background};
     box-shadow: 0 0px 50px 50px ${Theme.light.background};
+    padding-bottom: 4rem;
 `;
 
 export const Title = styled.h1`
