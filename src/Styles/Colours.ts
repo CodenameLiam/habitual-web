@@ -31,6 +31,22 @@ export const Theme: IThemeColours = {
     },
 };
 
+export const GreyColours = {
+    GREY0: '#f4f4f4',
+    GREY1: '#dddddd',
+    GREY2: '#c5c5c5',
+    GREY3: '#989898',
+    GREY4: '#6f6f6f',
+    GREY5: '#474747',
+    GREY6: '#222222',
+};
+
+export interface ColourType {
+    start: string;
+    end: string;
+    solid: string;
+}
+
 export const Colours = {
     MIDNIGHT: {
         start: '#8f79f8',
@@ -47,7 +63,6 @@ export const Colours = {
         end: '#f876de',
         solid: '#f876de',
     },
-
     SKY: {
         start: '#83EAF1',
         end: '#63A4FF',

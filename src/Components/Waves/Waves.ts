@@ -8,9 +8,8 @@ interface WaveProps {
 export const StyledWaveLeft = styled(WaveLeft)<WaveProps>`
     position: absolute;
     z-index: -1;
-    top: -300px;
+    top: -250px;
     left: 0;
-    right: 0;
     width: 100%;
     fill: ${(props) => props.background};
 `;

@@ -11,7 +11,12 @@ const App: FC = () => {
         <Container>
             <Global styles={GlobalStyles} />
             <Landing />
-            <Section colour={Theme.light.text} background={Theme.light.card} />
+            <Section colour={Theme.light.text} background={Theme.light.card} direction='left' />
+            <Section
+                colour={Theme.light.text}
+                background={Theme.light.background}
+                direction='right'
+            />
         </Container>
     );
 };
