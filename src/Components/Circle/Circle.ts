@@ -93,7 +93,7 @@ const Circle = styled.div<CircleProps>`
             ? `clamp(${props.bottom[0]}, ${props.bottom[1]}, ${props.bottom[2]})`
             : 'unset'};
     position: absolute;
-    animation: ${(props) => animations[props.animation]} 10s ease-in-out infinite;
+    animation: ${(props) => animations[props.animation]} 30s ease-in-out infinite;
 
     @media only screen and (max-width: 600px) {
         animation: ${(props) => animations[props.animation]} 15s ease-in-out infinite;
