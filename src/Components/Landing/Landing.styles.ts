@@ -24,11 +24,12 @@ export const Container = styled.div`
 
 export const LinkContainer = styled.div`
     display: flex;
-    margin: 1rem;
+    margin: 0.5rem;
 `;
 
 export const LinkButton = styled.button`
-    margin: 0.25rem;
+    margin: clamp(0.25rem, 1vw, 1rem);
+    padding: 0rem;
     cursor: pointer;
     padding: none;
     background-color: unset;
