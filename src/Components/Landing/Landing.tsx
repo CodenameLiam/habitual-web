@@ -59,15 +59,15 @@ const Landing: FC = () => {
                 />
                 <Circle
                     gradient={Colours.SKY}
-                    size={['3rem', '8vw', '10rem']}
-                    top={['4rem', '5vh', '10rem']}
-                    right={['1rem', '5vw', '8rem']}
+                    size={['4rem', '8vw', '10rem']}
+                    top={['5rem', '5vh', '10rem']}
+                    right={['2rem', '8vw', '6rem']}
                     animation={6}
                 />
                 <Circle
                     gradient={Colours.LIME}
                     size={['4rem', '6vw', '15rem']}
-                    bottom={['6rem', '10vh', '12rem']}
+                    bottom={['10rem', '15vh', '12rem']}
                     right={['0rem', '4vw', '4rem']}
                     animation={4}
                 />
