@@ -24,6 +24,7 @@ export const Container = styled.div`
 
 export const LinkContainer = styled.div`
     display: flex;
+    margin: 1rem;
 `;
 
 export const LinkButton = styled.button`
