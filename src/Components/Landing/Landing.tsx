@@ -32,43 +32,43 @@ const Landing: FC = () => {
                 <Circle
                     gradient={Colours.PURPLE}
                     size={['15rem', '25vw', '30rem']}
-                    top='-10rem'
-                    left='-15vw'
+                    top={['-5rem', '-5vh', '-10rem']}
+                    left={['-15rem', '-15vw', '-10rem']}
                     animation={3}
                 />
                 <Circle
                     gradient={Colours.TANGERINE}
                     size={['10rem', '18vw', '30rem']}
-                    bottom='10rem'
-                    left='-8vw'
+                    bottom={['8rem', '10vh', '10rem']}
+                    left={['-10rem', '-8vw', '-5rem']}
                     animation={2}
                 />
                 <Circle
                     gradient={Colours.GREEN}
-                    size={['8rem', '10vw', '25rem']}
-                    bottom='6rem'
-                    left='3vw'
+                    size={['6rem', '10vw', '25rem']}
+                    bottom={['7rem', '10vh', '8rem']}
+                    left={['2rem', '3vw', '3rem']}
                     animation={1}
                 />
                 <Circle
                     gradient={Colours.RED}
                     size={['10rem', '18vw', '25rem']}
-                    top='5rem'
-                    right='-15vw'
+                    top={['4rem', '10vh', '8rem']}
+                    right={['-10rem', '-15vw', '-6rem']}
                     animation={5}
                 />
                 <Circle
                     gradient={Colours.SKY}
-                    size={['3rem', '4vw', '15rem']}
-                    top='3rem'
-                    right='5vw'
+                    size={['3rem', '8vw', '10rem']}
+                    top={['4rem', '5vh', '10rem']}
+                    right={['1rem', '5vw', '8rem']}
                     animation={6}
                 />
                 <Circle
                     gradient={Colours.LIME}
                     size={['4rem', '6vw', '15rem']}
-                    bottom='12rem'
-                    right='4vw'
+                    bottom={['6rem', '10vh', '12rem']}
+                    right={['0rem', '4vw', '4rem']}
                     animation={4}
                 />
             </Fade>

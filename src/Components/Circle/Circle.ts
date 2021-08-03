@@ -70,10 +70,10 @@ type Size = [string, string, string];
 interface CircleProps {
     gradient: ColourType;
     size: Size;
-    top?: string;
-    left?: string;
-    right?: string;
-    bottom?: string;
+    top?: Size;
+    left?: Size;
+    right?: Size;
+    bottom?: Size;
     animation: keyof typeof animations;
 }
 
@@ -82,12 +82,22 @@ const Circle = styled.div<CircleProps>`
     height: ${(props) => `clamp(${props.size[0]}, ${props.size[1]}, ${props.size[2]})`};
     width: ${(props) => `clamp(${props.size[0]}, ${props.size[1]}, ${props.size[2]})`};
     border-radius: ${(props) => `clamp(${props.size[0]}, ${props.size[1]}, ${props.size[2]})`};
-    top: ${(props) => props.top};
-    left: ${(props) => props.left};
-    right: ${(props) => props.right};
-    bottom: ${(props) => props.bottom};
+    top: ${(props) =>
+        props.top ? `clamp(${props.top[0]}, ${props.top[1]}, ${props.top[2]})` : 'unset'};
+    left: ${(props) =>
+        props.left ? `clamp(${props.left[0]}, ${props.left[1]}, ${props.left[2]})` : 'unset'};
+    right: ${(props) =>
+        props.right ? `clamp(${props.right[0]}, ${props.right[1]}, ${props.right[2]})` : 'unset'};
+    bottom: ${(props) =>
+        props.bottom
+            ? `clamp(${props.bottom[0]}, ${props.bottom[1]}, ${props.bottom[2]})`
+            : 'unset'};
     position: absolute;
-    animation: ${(props) => animations[props.animation]} 30s ease-in-out infinite;
+    animation: ${(props) => animations[props.animation]} 10s ease-in-out infinite;
+
+    @media only screen and (max-width: 600px) {
+        animation: ${(props) => animations[props.animation]} 15s ease-in-out infinite;
+    }
 `;
 
 export default Circle;
