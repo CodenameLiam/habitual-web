@@ -6,7 +6,6 @@ import Gradient from '../../Styles/Gradient';
 /*
  * Animations
  */
-
 const animations = {
     1: keyframes`
         50% {
@@ -44,7 +43,7 @@ const animations = {
     `,
     5: keyframes`
         60% {
-            transform: translate(-5vw, -5vw);
+            transform: translate(-5vw, -3vw);
         }
         100% {
             transform: translate(0rem, 0rem);
@@ -63,7 +62,7 @@ const animations = {
 };
 
 /*
- * Circle
+ * Component
  */
 type Size = [string, string, string];
 

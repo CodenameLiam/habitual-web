@@ -4,7 +4,7 @@ import { AppStore, GooglePlay } from '../../Assets/Assets';
 import { fadeUp } from '../../Styles/Animations';
 import { Colours } from '../../Styles/Colours';
 import Circle from '../Circle/Circle';
-import FlipText from '../FlipText/FlipText';
+import FlipText from '../Text/FlipText/FlipText';
 import * as Styles from './Landing.styles';
 
 const Landing: FC = () => {
@@ -12,18 +12,22 @@ const Landing: FC = () => {
         <Styles.Section id='landing'>
             <Styles.Container>
                 <Reveal keyframes={fadeUp} triggerOnce duration={1000}>
-                    <Styles.Title>Habitual</Styles.Title>
+                    <Styles.Title>Habitual {process.env.REACT_APP_TEST}</Styles.Title>
                 </Reveal>
                 <Styles.SubTitle>
                     <FlipText delayOffset={5}>Build a Better You.</FlipText>
                 </Styles.SubTitle>
                 <Reveal keyframes={fadeUp} triggerOnce duration={1000} delay={1000}>
                     <Styles.LinkContainer>
-                        <Styles.LinkButton>
-                            <Styles.LinkImage src={AppStore} />
+                        <Styles.LinkButton
+                            aria-label='App Store Link'
+                            onClick={() => window.open('https://liampercy.com')}>
+                            <Styles.LinkImage src={AppStore} alt='App Store' />
                         </Styles.LinkButton>
-                        <Styles.LinkButton>
-                            <Styles.LinkImage src={GooglePlay} />
+                        <Styles.LinkButton
+                            aria-label='Google Play Store Link'
+                            onClick={() => window.open('https://liampercy.com')}>
+                            <Styles.LinkImage src={GooglePlay} alt='Google Play Store' />
                         </Styles.LinkButton>
                     </Styles.LinkContainer>
                 </Reveal>
@@ -53,14 +57,14 @@ const Landing: FC = () => {
                 <Circle
                     gradient={Colours.RED}
                     size={['10rem', '18vw', '25rem']}
-                    top={['4rem', '10vh', '8rem']}
+                    top={['4rem', '12vh', '10rem']}
                     right={['-10rem', '-15vw', '-6rem']}
                     animation={5}
                 />
                 <Circle
                     gradient={Colours.SKY}
                     size={['4rem', '8vw', '10rem']}
-                    top={['5rem', '5vh', '10rem']}
+                    top={['5rem', '6vh', '10rem']}
                     right={['2rem', '8vw', '6rem']}
                     animation={6}
                 />

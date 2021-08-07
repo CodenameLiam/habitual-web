@@ -1,23 +1,32 @@
-import { Global } from '@emotion/react';
 import React, { FC } from 'react';
-import GlobalStyles from './Styles/Global';
 import Landing from './Components/Landing/Landing';
 import Section from './Components/Section/Section';
-import { Container } from './Styles/Containers';
+
+/* Theming */
+import GlobalStyles from './Styles/Global';
+import { Global } from '@emotion/react';
 import { Theme } from './Styles/Colours';
+import { AppContainer } from './Styles/Containers';
+
+/* Firebase */
+import { initializeApp } from 'firebase/app';
+import firebaseConfig from './Services/FirebaseService';
+import Router from './Routes/Router';
+initializeApp(firebaseConfig);
 
 const App: FC = () => {
     return (
-        <Container>
+        <AppContainer>
             <Global styles={GlobalStyles} />
-            <Landing />
+            <Router />
+            {/* <Landing />
             <Section colour={Theme.light.text} background={Theme.light.card} direction='left' />
             <Section
                 colour={Theme.light.text}
                 background={Theme.light.background}
                 direction='right'
-            />
-        </Container>
+            /> */}
+        </AppContainer>
     );
 };
 
