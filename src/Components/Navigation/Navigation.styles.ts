@@ -40,12 +40,12 @@ export const Button = styled.div<NavigationProps>`
 `;
 
 export const Background = styled.div<NavigationProps>`
-    aspect-ratio: 1;
     z-index: 50;
     position: fixed;
     border-radius: 250vmax;
     background-color: ${Theme.dark.card};
-    width: ${(props) => (props.open ? '300vmax' : '2vmax')};
+    width: ${(props) => (props.open ? '300vmax' : '0vmax')};
+    height: ${(props) => (props.open ? '300vmax' : '0vmax')};
     top: ${(props) => (props.open ? '-150vmax' : '3.5rem')};
     right: ${(props) => (props.open ? '-150vmax' : '3.5rem')};
     transition: all ${(props) => (props.open ? '0.8s ease-out' : '0.5s ease-in-out')};
@@ -57,7 +57,10 @@ export const Background = styled.div<NavigationProps>`
 `;
 
 export const Container = styled.div<NavigationProps>`
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 99;
     position: fixed;
     display: ${(props) => (props.open ? 'block' : 'none')};
