@@ -44,7 +44,7 @@ export const Background = styled.div<NavigationProps>`
     position: fixed;
     border-radius: 250vmax;
     background-color: ${Theme.dark.card};
-    width: ${(props) => (props.open ? '300vmax' : '0vmax')};
+    width: ${(props) => (props.open ? '300vmax' : '2vmax')};
     top: ${(props) => (props.open ? '-150vmax' : '3.5rem')};
     right: ${(props) => (props.open ? '-150vmax' : '3.5rem')};
     transition: all ${(props) => (props.open ? '0.8s ease-out' : '0.5s ease-in-out')};
