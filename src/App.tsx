@@ -1,11 +1,8 @@
-import React, { FC } from 'react';
-import Landing from './Components/Landing/Landing';
-import Section from './Components/Section/Section';
+import { FC } from 'react';
 
 /* Theming */
 import GlobalStyles from './Styles/Global';
 import { Global } from '@emotion/react';
-import { Theme } from './Styles/Colours';
 import { AppContainer } from './Styles/Containers';
 
 /* Firebase */
