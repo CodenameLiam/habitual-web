@@ -13,7 +13,7 @@ const Page: FC<PageProps> = ({ title, children }) => {
     return (
         <Fragment>
             <Navigation />
-            {children}
+            <main>{children}</main>
         </Fragment>
     );
 };

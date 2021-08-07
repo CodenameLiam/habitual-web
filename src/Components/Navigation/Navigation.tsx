@@ -8,7 +8,7 @@ const Navigation: FC = () => {
 
     return (
         <Styles.Section id='menu'>
-            <Styles.Button open={open}>
+            <Styles.Button id='menu-button' open={open}>
                 <Cross
                     aria-label='Open menu'
                     rounded
@@ -18,10 +18,10 @@ const Navigation: FC = () => {
                     size={26}
                 />
             </Styles.Button>
-            <Styles.Background open={open} />
+            <Styles.Background id='menu-background' open={open} />
 
-            <Styles.Container id='nav-container' open={open}>
-                <Styles.Content id='nav-content' open={open}>
+            <Styles.Container open={open}>
+                <Styles.Content id='navigation' open={open}>
                     <Styles.List>
                         <Styles.NavItem delay='0s'>
                             <Styles.NavLink to='/'>Home</Styles.NavLink>

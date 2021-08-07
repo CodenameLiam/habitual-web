@@ -7,6 +7,7 @@ import { Theme } from 'Styles/Colours';
 
 export const Section = styled.section`
     position: absolute;
+    z-index: 999;
 `;
 
 interface NavigationProps {
