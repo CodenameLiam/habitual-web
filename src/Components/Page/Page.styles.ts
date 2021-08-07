@@ -1,5 +1,15 @@
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-export const Container = styled.div`
-    position: relative;
+interface PageProps {
+    open: boolean;
+}
+
+export const Container = styled.div<PageProps>`
+    ${(props) =>
+        props.open &&
+        css`
+            overflow: hidden;
+            height: 100vh;
+        `}
 `;

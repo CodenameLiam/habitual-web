@@ -1,10 +1,15 @@
 import { Cross } from 'hamburger-react';
+import { useEffect } from 'react';
 import { FC, useState } from 'react';
 import { GreyColours } from 'Styles/Colours';
 import * as Styles from './Navigation.styles';
 
 const Navigation: FC = () => {
     const [open, setOpen] = useState(false);
+
+    useEffect(() => {
+        document.body.style.overflow = open ? 'hidden' : 'visible';
+    }, [open]);
 
     return (
         <Styles.Section id='menu'>
