@@ -17,7 +17,7 @@ const Content: FC<ContentProps> = ({ img, alt, heading, body }) => {
             <Reveal
                 triggerOnce
                 keyframes={fadeUp}
-                fraction={0.5}
+                fraction={0.3}
                 duration={1000}
                 cascade
                 damping={0.1}>
