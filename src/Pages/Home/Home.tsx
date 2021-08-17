@@ -1,13 +1,10 @@
-import React, { Fragment } from 'react';
+import { Fragment } from 'react';
 import Landing from 'Components/Landing/Landing';
 import Section from 'Components/Section/Section';
 import { Theme } from 'Styles/Colours';
-import Habit from 'Components/Habit/Habit';
 import { DualiPhone } from 'Assets/Assets';
 // import { ContentContainer } from 'Styles/Containers';
 import Content from 'Components/Content/Content';
-import Circle from 'Components/Circle/Circle';
-import { Sparkles } from 'Components/Sparkles/Sparkles';
 
 const Home = () => {
     return (

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import InView, { useInView } from 'react-intersection-observer';
+import { useInView } from 'react-intersection-observer';
 import { FlipTextCard, FlipTextContainer, FlipTextWord } from './FlipText.styles';
 
 interface FlipTextProps {
