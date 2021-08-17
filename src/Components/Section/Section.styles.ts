@@ -10,10 +10,11 @@ interface SectionProps {
 export const Section = styled.section<SectionProps>`
     z-index: 1;
     position: relative;
-    height: 500px;
     font-weight: 500;
     color: ${(props) => props.colour};
     background-color: ${(props) => props.background};
+    padding-top: 2rem;
+    padding-bottom: 20rem;
 `;
 
 export const SectionWaveLeft = styled(WaveLeft)<SectionProps>`

@@ -28,16 +28,16 @@ const Navigation: FC = () => {
             <Styles.Container open={open}>
                 <Styles.Content id='navigation' open={open}>
                     <Styles.List>
-                        <Styles.NavItem delay='0s'>
+                        <Styles.NavItem delay='0.1s'>
                             <Styles.NavLink to='/'>Home</Styles.NavLink>
                         </Styles.NavItem>
-                        <Styles.NavItem delay='0.1s'>
+                        <Styles.NavItem delay='0.2s'>
                             <Styles.NavLink to='/request'>Request</Styles.NavLink>
                         </Styles.NavItem>
-                        <Styles.NavItem delay='0.2s'>
+                        <Styles.NavItem delay='0.3s'>
                             <Styles.NavLink to='/'>Contact</Styles.NavLink>
                         </Styles.NavItem>
-                        <Styles.NavItem delay='0.3s'>
+                        <Styles.NavItem delay='0.4s'>
                             <Styles.NavLink to='/'>Sign In</Styles.NavLink>
                         </Styles.NavItem>
                     </Styles.List>

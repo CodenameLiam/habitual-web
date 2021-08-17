@@ -46,13 +46,13 @@ export const Background = styled.div<NavigationProps>`
     background-color: ${Theme.dark.card};
     width: ${(props) => (props.open ? '300vmax' : '0vmax')};
     height: ${(props) => (props.open ? '300vmax' : '0vmax')};
-    top: ${(props) => (props.open ? '-150vmax' : '3.5rem')};
-    right: ${(props) => (props.open ? '-150vmax' : '3.5rem')};
-    transition: all ${(props) => (props.open ? '0.8s ease-out' : '0.5s ease-in-out')};
+    top: ${(props) => (props.open ? 'calc(-150vmax + 3.5rem)' : '3.5rem')};
+    right: ${(props) => (props.open ? 'calc(-150vmax + 3.5rem)' : '3.5rem')};
+    transition: all ${(props) => (props.open ? '0.8s ease-out' : '0.3s ease-out')};
 
     @media only screen and (max-width: 600px) {
-        top: ${(props) => (props.open ? '-150vmax' : '2.5rem')};
-        right: ${(props) => (props.open ? '-150vmax' : '2.5rem')};
+        top: ${(props) => (props.open ? 'calc(-150vmax + 2.5rem)' : '2.5rem')};
+        right: ${(props) => (props.open ? 'calc(-150vmax + 2.5rem)' : '2.5rem')};
     }
 `;
 
@@ -102,6 +102,7 @@ export const NavLink = styled(Link)`
     color: ${Theme.dark.text};
     transition: color 0.25s ease-in-out;
     text-decoration: none;
+    font-weight: 500;
 
     &::after {
         content: '';
@@ -124,3 +125,5 @@ export const NavLink = styled(Link)`
         }
     }
 `;
+
+export const NavSignIn = styled.span``;

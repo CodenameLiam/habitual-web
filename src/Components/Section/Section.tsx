@@ -8,7 +8,7 @@ interface SectionProps {
     direction: 'left' | 'right';
 }
 
-const Section: FC<SectionProps> = ({ colour, background, direction }) => {
+const Section: FC<SectionProps> = ({ colour, background, direction, children }) => {
     return (
         <Styles.Section colour={colour} background={background}>
             {direction === 'left' ? (
@@ -16,7 +16,7 @@ const Section: FC<SectionProps> = ({ colour, background, direction }) => {
             ) : (
                 <Styles.SectionWaveRight background={background} />
             )}
-            <p>Testing testing 123</p>
+            {children}
         </Styles.Section>
     );
 };

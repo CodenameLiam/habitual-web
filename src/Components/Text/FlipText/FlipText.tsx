@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import InView from 'react-intersection-observer';
+import InView, { useInView } from 'react-intersection-observer';
 import { FlipTextCard, FlipTextContainer, FlipTextWord } from './FlipText.styles';
 
 interface FlipTextProps {
@@ -28,33 +28,31 @@ const FlipText: FC<FlipTextProps> = ({
     threshold = 0,
     triggerOnce = true,
 }) => {
+    const { ref, inView } = useInView({ triggerOnce, threshold });
+
     return (
-        <InView triggerOnce={triggerOnce} threshold={threshold}>
-            {({ inView, ref }) => (
-                <FlipTextContainer ref={ref} onNewLine={onNewLine}>
-                    {children
-                        ?.toString()
-                        .split(onNewLine ? '\n' : ' ')
-                        .map((word, index) => {
-                            const delayWord = getDelay(index, stutterIndex);
-                            return (
-                                <FlipTextCard
-                                    key={word + index}
-                                    delayDuration={delayDuration}
-                                    delayOffset={delayWord + delayOffset}
-                                    inView={inView}>
-                                    <FlipTextWord
-                                        delayDuration={delayDuration}
-                                        delayOffset={delayOffset}
-                                        inView={inView}>
-                                        {word + ' '}
-                                    </FlipTextWord>
-                                </FlipTextCard>
-                            );
-                        })}
-                </FlipTextContainer>
-            )}
-        </InView>
+        <FlipTextContainer ref={ref} onNewLine={onNewLine}>
+            {children
+                ?.toString()
+                .split(onNewLine ? '\n' : ' ')
+                .map((word, index) => {
+                    const delayWord = getDelay(index, stutterIndex);
+                    return (
+                        <FlipTextCard
+                            key={word + index}
+                            delayDuration={delayDuration}
+                            delayOffset={delayWord + delayOffset}
+                            inView={inView}>
+                            <FlipTextWord
+                                delayDuration={delayDuration}
+                                delayOffset={delayOffset}
+                                inView={inView}>
+                                {word + ' '}
+                            </FlipTextWord>
+                        </FlipTextCard>
+                    );
+                })}
+        </FlipTextContainer>
     );
 };
 

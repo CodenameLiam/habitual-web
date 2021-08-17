@@ -42,7 +42,7 @@ export const LinkImage = styled.img`
 
 export const Title = styled.h1`
     margin: 0;
-    font-size: clamp(4rem, 8vw, 10rem);
+    font-size: clamp(4rem, 12vw, 10rem);
     background: url(${Circles});
     background-clip: text;
     background-size: max(10rem, 20vw);
@@ -62,8 +62,9 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h2`
+    font-weight: 600;
     color: ${GreyColours.GREY4};
-    font-size: clamp(1.25rem, 2vw, 3rem);
+    font-size: clamp(1.4rem, 3vw, 2.5rem);
 `;
 
 export const LandingWave = styled(WaveLeft)`

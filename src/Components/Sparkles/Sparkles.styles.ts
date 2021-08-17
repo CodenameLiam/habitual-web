@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { ReactComponent as Sparkle } from './../../Media/Graphics/Check.svg';
 
 export const Container = styled.div`
+    z-index: -1;
     position: absolute;
     width: 100%;
     height: 100%;

@@ -13,16 +13,9 @@ initializeApp(firebaseConfig);
 
 const App: FC = () => {
     return (
-        <AppContainer>
+        <AppContainer id='app'>
             <Global styles={GlobalStyles} />
             <Router />
-            {/* <Landing />
-            <Section colour={Theme.light.text} background={Theme.light.card} direction='left' />
-            <Section
-                colour={Theme.light.text}
-                background={Theme.light.background}
-                direction='right'
-            /> */}
         </AppContainer>
     );
 };
