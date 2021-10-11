@@ -1,85 +1,47 @@
-import React, { useCallback, useEffect, useRef } from 'react';
-import { useInView } from 'react-intersection-observer';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+import { Check, Circle } from 'Assets/Assets';
+import { FC, useRef, useState } from 'react';
+import { Colours } from 'Styles/Colours';
+import * as Styles from './Habit.styles';
 
-const Habit = () => {
-    const scaleRef = useRef<HTMLDivElement | null>(null);
-    const habitRef = useRef<HTMLDivElement | null>(null);
-    const [inViewRef, inView] = useInView();
-    let ticking = useRef(false);
-    // const [scale, setScale] = useState(1);
+interface HabitProps {
+    text: string;
+    icon: string;
+    gradient: keyof typeof Colours;
+}
 
-    const setRefs = useCallback(
-        (node) => {
-            habitRef.current = node;
-            inViewRef(node);
+const Habit: FC<HabitProps> = ({ text, icon, gradient }) => {
+    const elementRef = useRef<HTMLDivElement>(null);
+    const [transformSize, setTransformSize] = useState(1);
+    const [check, setCheck] = useState(false);
+
+    useScrollPosition(
+        ({ currPos }) => {
+            setTransformSize(
+                Math.max(
+                    1,
+                    (window.innerHeight - window.innerHeight / 4 - currPos.y) /
+                        (window.innerHeight / 50)
+                )
+            );
+            setCheck(currPos.y < window.innerHeight / 2.8);
         },
-        [inViewRef]
+        [],
+        elementRef
     );
 
-    const update = useCallback(() => {
-        ticking.current = false;
-
-        if (habitRef.current && scaleRef.current) {
-            const screenHeight = window.innerHeight;
-            const habitTop = habitRef.current.getBoundingClientRect().top;
-
-            const dimensions = Math.max(1, (screenHeight - habitTop - 200) / 30);
-
-            // console.log(dimensions);
-
-            scaleRef.current.style.transform = `scale(${dimensions})`;
-        }
-    }, []);
-
-    const requestTick = useCallback(() => {
-        if (!ticking.current && inView) {
-            requestAnimationFrame(update);
-        }
-        ticking.current = true;
-    }, [inView, update]);
-
-    const animateHabit = useCallback(() => {
-        if (inView) {
-            requestTick();
-        }
-    }, [inView, requestTick]);
-
-    useEffect(() => {
-        window.addEventListener('scroll', animateHabit);
-
-        return () => {
-            window.removeEventListener('scroll', animateHabit);
-        };
-    }, [animateHabit]);
-
     return (
-        <div
-            ref={setRefs}
-            style={{
-                width: 300,
-                height: 80,
-                background: 'red',
-                position: 'relative',
-                display: 'flex',
-                alignItems: 'center',
-                overflow: 'hidden',
-                margin: '1rem auto',
-            }}>
-            <div
-                ref={scaleRef}
-                style={{
-                    height: 40,
-                    width: 40,
-                    borderRadius: 50,
-                    position: 'absolute',
-                    left: 10,
-                    background: 'green',
-                    // transition: '0.25s transform',
-                    // transform: `scale(${scale})`,
-                }}
-            />
-            BRRRRUH
-        </div>
+        <Styles.Container ref={elementRef}>
+            <Styles.CircleContainer>
+                <Styles.Circle circleSize={transformSize} circleColour={Colours[gradient]} />
+                <Styles.Icon src={icon} />
+            </Styles.CircleContainer>
+
+            <Styles.Text>{text}</Styles.Text>
+            <Styles.CheckContainer>
+                {check ? <Styles.CheckIcon src={Check} /> : <Styles.CircleIcon src={Circle} />}
+            </Styles.CheckContainer>
+        </Styles.Container>
     );
 };
 

@@ -5,6 +5,7 @@
     "dependencies": {
         "@emotion/react": "^11.4.0",
         "@emotion/styled": "^11.3.0",
+        "@n8tb1t/use-scroll-position": "^2.0.3",
         "@testing-library/jest-dom": "^5.11.4",
         "@testing-library/react": "^11.1.0",
         "@testing-library/user-event": "^12.1.10",
@@ -14,6 +15,8 @@
         "@types/react-dom": "^17.0.0",
         "firebase": "^9.0.0-beta.8",
         "hamburger-react": "^2.4.1",
+        "patch-package": "^6.4.7",
+        "postinstall-postinstall": "^2.1.0",
         "react": "^17.0.2",
         "react-awesome-reveal": "^3.8.1",
         "react-dom": "^17.0.2",
@@ -27,7 +30,8 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "postinstall": "patch-package"
     },
     "eslintConfig": {
         "extends": [

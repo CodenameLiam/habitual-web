@@ -35,10 +35,10 @@ const Navigation: FC = () => {
                             <Styles.NavLink to='/request'>Request</Styles.NavLink>
                         </Styles.NavItem>
                         <Styles.NavItem delay='0.3s'>
-                            <Styles.NavLink to='/'>Contact</Styles.NavLink>
+                            <Styles.NavLink to='/support'>Support</Styles.NavLink>
                         </Styles.NavItem>
                         <Styles.NavItem delay='0.4s'>
-                            <Styles.NavLink to='/'>Sign In</Styles.NavLink>
+                            <Styles.NavLink to='/login'>Sign In</Styles.NavLink>
                         </Styles.NavItem>
                     </Styles.List>
                 </Styles.Content>

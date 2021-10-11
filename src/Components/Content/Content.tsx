@@ -1,17 +1,17 @@
-import React, { FC } from 'react';
+import React, { FC, Fragment } from 'react';
 import Reveal from 'react-awesome-reveal';
 import { fadeUp } from 'Styles/Animations';
 
 import * as Styles from './Content.styles';
 
 interface ContentProps {
-    img: string;
-    alt: string;
+    img?: string;
+    alt?: string;
     heading: string;
     body: string;
 }
 
-const Content: FC<ContentProps> = ({ img, alt, heading, body }) => {
+const Content: FC<ContentProps> = ({ img, alt, heading, body, children }) => {
     return (
         <Styles.Container>
             <Reveal
@@ -21,7 +21,8 @@ const Content: FC<ContentProps> = ({ img, alt, heading, body }) => {
                 duration={1000}
                 cascade
                 damping={0.1}>
-                <Styles.Image src={img} alt={alt} />
+                <Fragment>{img && <Styles.Image src={img} alt={alt} />}</Fragment>
+                <Fragment>{children}</Fragment>
                 <Styles.TextContainer>
                     <Styles.Heading>{heading}</Styles.Heading>
                     <Styles.Body>{body}</Styles.Body>

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import Home from 'Pages/Home/Home';
-import Landing from 'Components/Landing/Landing';
+import CommingSoon from 'Components/ComingSoon/CommingSoon';
 
 interface Route {
     title: string;
@@ -10,7 +10,7 @@ interface Route {
     component: FC<RouteComponentProps>;
 }
 
-type RouteRecord = Record<'Home' | 'Request', Route>;
+type RouteRecord = Record<'Home' | 'RequestHome' | 'Request' | 'Support' | 'Login', Route>;
 
 const Routes: RouteRecord = {
     Home: {
@@ -19,10 +19,25 @@ const Routes: RouteRecord = {
         exact: true,
         component: Home,
     },
+    RequestHome: {
+        title: 'Feature Requests.',
+        path: '/request',
+        component: CommingSoon,
+    },
     Request: {
         title: 'Feature Requests.',
         path: '/request/:feature',
-        component: Landing,
+        component: CommingSoon,
+    },
+    Support: {
+        title: 'Support.',
+        path: '/support',
+        component: CommingSoon,
+    },
+    Login: {
+        title: 'Login.',
+        path: '/login',
+        component: CommingSoon,
     },
 };
 

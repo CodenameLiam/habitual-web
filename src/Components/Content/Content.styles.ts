@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { GreyColours } from 'Styles/Colours';
 
 export const Container = styled.div`
     text-align: center;
@@ -9,19 +8,19 @@ export const Container = styled.div`
 `;
 
 export const Image = styled.img`
-    padding: 3rem;
+    padding: 0rem 4rem;
     object-fit: contain;
-    max-width: calc(100% - 6rem);
+    max-width: calc(100% - 8rem);
     max-height: 40rem;
 `;
 
 export const TextContainer = styled.div`
-    white-space: pre-line;
-    color: ${GreyColours.GREY4};
     padding: 0rem 2rem;
+    margin-top: 4rem;
 `;
 
 export const Heading = styled.h2`
+    white-space: pre-line;
     font-weight: 600;
     font-size: clamp(1.4rem, 3vw, 2.5rem);
     @media only screen and (max-width: 600px) {
