@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import Home from 'Pages/Home/Home';
 import CommingSoon from 'Components/ComingSoon/CommingSoon';
+import PrivacyPolicy from 'Pages/Privacy/PrivacyPolicy';
 
 interface Route {
     title: string;
@@ -10,7 +11,7 @@ interface Route {
     component: FC<RouteComponentProps>;
 }
 
-type RouteRecord = Record<'Home' | 'RequestHome' | 'Request' | 'Support' | 'Login', Route>;
+type RouteRecord = Record<string, Route>;
 
 const Routes: RouteRecord = {
     Home: {
@@ -38,6 +39,11 @@ const Routes: RouteRecord = {
         title: 'Login.',
         path: '/login',
         component: CommingSoon,
+    },
+    Privacy: {
+        title: 'Privacy Policy.',
+        path: '/privacy-policy',
+        component: PrivacyPolicy,
     },
 };
 
