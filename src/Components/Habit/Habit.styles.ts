@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { ColourType, Theme } from 'Styles/Colours';
+import Gradient from 'Styles/Gradient';
 
 export const Container = styled.div`
     position: relative;
@@ -39,8 +40,8 @@ export const Circle = styled.div<CircleProps>`
     max-width: 100px;
     background-color: green;
     transform: ${({ circleSize: transformSize }) => `scale(${transformSize})`};
-    background: ${({ circleColour }) =>
-        `linear-gradient(135deg, ${circleColour.start} 0%, ${circleColour.end} 100%)`};
+    background: ${({ circleColour }) => Gradient(circleColour)};
+    transition: transform 1s;
 `;
 
 export const Icon = styled.img`
