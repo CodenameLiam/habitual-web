@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { Link } from 'react-router-dom';
 import * as Styles from './PrivacyPolicy.styles';
 
 const PrivacyPolicy: FC = () => {
@@ -340,12 +341,7 @@ const PrivacyPolicy: FC = () => {
             <ul>
                 <li>
                     By visiting this page on our website:{' '}
-                    <a
-                        href='https://gethabitual.app/support'
-                        rel='external nofollow noopener'
-                        target='_blank'>
-                        https://gethabitual.app/support
-                    </a>
+                    <Link to='/support'>https://gethabitual.app/support</Link>
                 </li>
             </ul>
         </Styles.Container>
