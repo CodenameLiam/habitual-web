@@ -85,7 +85,7 @@ const Home = () => {
                         <Styles.LinkContainer>
                             <Styles.LinkButton
                                 aria-label='App Store Link'
-                                onClick={() => window.open('https://liampercy.com')}>
+                                onClick={() => window.open(AppStore)}>
                                 <Styles.LinkImage src={AppStore} alt='App Store' />
                             </Styles.LinkButton>
                             <Styles.LinkButton
