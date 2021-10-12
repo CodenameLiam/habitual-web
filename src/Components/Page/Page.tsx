@@ -17,7 +17,7 @@ const Page: FC<PageProps> = ({ title, children }) => {
             <Navigation />
             <main>{children}</main>
             <Footer>
-                <Link to='/privacy-policy'>Privacy Policty</Link>
+                <Link to='/privacy-policy'>Privacy Policy</Link>
             </Footer>
         </Fragment>
     );

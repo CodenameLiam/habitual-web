@@ -3,6 +3,7 @@ import { RouteComponentProps } from 'react-router-dom';
 import Home from 'Pages/Home/Home';
 import CommingSoon from 'Components/ComingSoon/CommingSoon';
 import PrivacyPolicy from 'Pages/Privacy/PrivacyPolicy';
+import Support from 'Pages/Support/Support';
 
 interface Route {
     title: string;
@@ -33,7 +34,7 @@ const Routes: RouteRecord = {
     Support: {
         title: 'Support.',
         path: '/support',
-        component: CommingSoon,
+        component: Support,
     },
     Login: {
         title: 'Login.',

@@ -50,7 +50,7 @@ export const BackButton = styled.button`
     width: 60vw;
     max-width: 15rem;
     height: 3rem;
-    background: ${Gradient(Colours.MIDNIGHT)};
+    background: ${Gradient(Colours.ORANGE)};
     border: none;
     border-radius: 0.5rem;
     font-family: 'Montserrat', sans-serif;

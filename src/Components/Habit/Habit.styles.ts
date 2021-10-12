@@ -7,7 +7,7 @@ export const Container = styled.div`
     width: 90vw;
     max-width: 700px;
     height: 10vh;
-    max-height: 200px;
+    max-height: 120px;
     background-color: ${Theme.light.card};
     margin: 1rem auto;
     border-radius: clamp(0.5rem, 1vw, 1rem);
@@ -17,7 +17,7 @@ export const Container = styled.div`
 `;
 
 interface CircleProps {
-    circleSize: number;
+    circleTransform: boolean;
     circleColour: ColourType;
 }
 
@@ -39,9 +39,9 @@ export const Circle = styled.div<CircleProps>`
     max-height: 100px;
     max-width: 100px;
     background-color: green;
-    transform: ${({ circleSize: transformSize }) => `scale(${transformSize})`};
+    transform: ${({ circleTransform }) => `scale(${circleTransform ? 20 : 1})`};
     background: ${({ circleColour }) => Gradient(circleColour)};
-    transition: transform 1s;
+    transition: transform 3s ease;
 `;
 
 export const Icon = styled.img`

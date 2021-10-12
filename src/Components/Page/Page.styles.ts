@@ -20,6 +20,7 @@ export const Footer = styled.footer`
     padding: 2rem;
 
     a {
+        font-weight: 600;
         text-decoration: none;
         color: ${Theme.dark.text};
 

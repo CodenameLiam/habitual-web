@@ -12,7 +12,7 @@ const Landing: FC = () => {
         <Styles.Section id='landing'>
             <Styles.Container>
                 <Reveal keyframes={fadeUp} triggerOnce duration={1000}>
-                    <Styles.Title>Habitual {process.env.REACT_APP_TEST}</Styles.Title>
+                    <Styles.Title>Habitual</Styles.Title>
                 </Reveal>
                 <Styles.SubTitle>
                     <FlipText delayOffset={5}>Build a Better You.</FlipText>

@@ -61,10 +61,23 @@ export const Title = styled.h1`
     }
 `;
 
+export const SubTitleColour = styled(Title)`
+    font-size: clamp(2rem, 8vw, 6rem);
+    animation: animateTitle 4000s linear infinite;
+    margin-bottom: 2rem;
+`;
+
 export const SubTitle = styled.h2`
     font-weight: 600;
     color: ${GreyColours.GREY4};
     font-size: clamp(1.4rem, 3vw, 2.5rem);
+`;
+
+export const DownloadContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -8rem;
 `;
 
 export const LandingWave = styled(WaveLeft)`

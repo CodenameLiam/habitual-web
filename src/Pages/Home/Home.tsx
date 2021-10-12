@@ -2,9 +2,23 @@ import { Fragment } from 'react';
 import Landing from 'Components/Landing/Landing';
 import Section from 'Components/Section/Section';
 import { Theme } from 'Styles/Colours';
-import { Book, DarkMode, DualiPhone, Fruit, Piano, Run, Tracking } from 'Assets/Assets';
+import {
+    AppStore,
+    Book,
+    DarkMode,
+    DualiPhone,
+    Fruit,
+    GooglePlay,
+    LevitatingPhone,
+    Piano,
+    Run,
+    Tracking,
+} from 'Assets/Assets';
 import Content from 'Components/Content/Content';
 import Habit from 'Components/Habit/Habit';
+import * as Styles from 'Components/Landing/Landing.styles';
+import Reveal from 'react-awesome-reveal';
+import { fadeUp } from 'Styles/Animations';
 
 const Home = () => {
     return (
@@ -29,7 +43,6 @@ const Home = () => {
                 <Content
                     heading='Complete habits.'
                     body={`Easily create and cultivate new habits with Habitual. 
-                    Design your own custom habits, or use some of ours. 
                     Find value in your new routine. The best time to start is now!`}>
                     <Habit icon={Run} gradient='AQUA' text='Go for a run' />
                     <Habit icon={Piano} gradient='ORANGE' text='Practice the piano' />
@@ -53,6 +66,36 @@ const Home = () => {
                     heading={`Join the dark side.`}
                     body={`Habitual is also available in dark mode, which is pretty neat.`}
                 />
+            </Section>
+            <Section colour={Theme.light.text} background={Theme.light.background} direction='left'>
+                <Content
+                    img={LevitatingPhone}
+                    alt='Levitating Screenshots'
+                    heading={`Be Inspired.`}
+                    body={`Design your own habits, or select from one of ours.
+                    There is always opportunity for inspiration when building great habits!`}
+                />
+            </Section>
+            <Section colour={Theme.light.text} background={Theme.light.card} direction='right'>
+                <Styles.DownloadContainer>
+                    <Reveal keyframes={fadeUp} triggerOnce duration={1000}>
+                        <Styles.SubTitleColour>Download Today</Styles.SubTitleColour>
+                    </Reveal>
+                    <Reveal keyframes={fadeUp} triggerOnce duration={1000}>
+                        <Styles.LinkContainer>
+                            <Styles.LinkButton
+                                aria-label='App Store Link'
+                                onClick={() => window.open('https://liampercy.com')}>
+                                <Styles.LinkImage src={AppStore} alt='App Store' />
+                            </Styles.LinkButton>
+                            <Styles.LinkButton
+                                aria-label='Google Play Store Link'
+                                onClick={() => window.open('https://liampercy.com')}>
+                                <Styles.LinkImage src={GooglePlay} alt='Google Play Store' />
+                            </Styles.LinkButton>
+                        </Styles.LinkContainer>
+                    </Reveal>
+                </Styles.DownloadContainer>
             </Section>
         </Fragment>
     );

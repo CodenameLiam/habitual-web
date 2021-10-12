@@ -12,19 +12,11 @@ interface HabitProps {
 
 const Habit: FC<HabitProps> = ({ text, icon, gradient }) => {
     const elementRef = useRef<HTMLDivElement>(null);
-    const [transformSize, setTransformSize] = useState(1);
     const [check, setCheck] = useState(false);
 
     useScrollPosition(
         ({ currPos }) => {
-            setTransformSize(
-                Math.max(
-                    1,
-                    (window.innerHeight - window.innerHeight / 4 - currPos.y) /
-                        (window.innerHeight / 50)
-                )
-            );
-            setCheck(currPos.y < window.innerHeight / 2.8);
+            setCheck(currPos.y < window.innerHeight / 2.5);
         },
         [],
         elementRef
@@ -33,7 +25,7 @@ const Habit: FC<HabitProps> = ({ text, icon, gradient }) => {
     return (
         <Styles.Container ref={elementRef}>
             <Styles.CircleContainer>
-                <Styles.Circle circleSize={transformSize} circleColour={Colours[gradient]} />
+                <Styles.Circle circleTransform={check} circleColour={Colours[gradient]} />
                 <Styles.Icon src={icon} />
             </Styles.CircleContainer>
 

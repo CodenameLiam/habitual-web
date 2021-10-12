@@ -4,9 +4,10 @@ export const Circles = `${ASSET_URL}/Circles.webp`;
 export const GooglePlay = `${ASSET_URL}/GooglePlay.svg`;
 export const AppStore = `${ASSET_URL}/AppStore.svg`;
 
-export const DualiPhone = `${ASSET_URL}/DualiPhone.webp`;
+export const DualiPhone = `${ASSET_URL}/DualiPhone1.webp`;
 export const Tracking = `${ASSET_URL}/Tracking.webp`;
 export const DarkMode = `${ASSET_URL}/DarkMode.webp`;
+export const LevitatingPhone = `${ASSET_URL}/LevitatingPhone3.webp`;
 
 export const Run = `${ASSET_URL}/Run.webp`;
 export const Book = `${ASSET_URL}/Book.webp`;
