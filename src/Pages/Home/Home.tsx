@@ -19,6 +19,7 @@ import Habit from 'Components/Habit/Habit';
 import * as Styles from 'Components/Landing/Landing.styles';
 import Reveal from 'react-awesome-reveal';
 import { fadeUp } from 'Styles/Animations';
+import { AppStoreLink } from 'Assets/Apps';
 
 const Home = () => {
     return (
@@ -85,7 +86,7 @@ const Home = () => {
                         <Styles.LinkContainer>
                             <Styles.LinkButton
                                 aria-label='App Store Link'
-                                onClick={() => window.open(AppStore)}>
+                                onClick={() => window.open(AppStoreLink)}>
                                 <Styles.LinkImage src={AppStore} alt='App Store' />
                             </Styles.LinkButton>
                             <Styles.LinkButton

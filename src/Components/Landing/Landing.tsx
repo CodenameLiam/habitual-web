@@ -1,3 +1,4 @@
+import { AppStoreLink } from 'Assets/Apps';
 import { FC } from 'react';
 import Reveal, { Fade } from 'react-awesome-reveal';
 import { AppStore, GooglePlay } from '../../Assets/Assets';
@@ -21,7 +22,7 @@ const Landing: FC = () => {
                     <Styles.LinkContainer>
                         <Styles.LinkButton
                             aria-label='App Store Link'
-                            onClick={() => window.open(AppStore)}>
+                            onClick={() => window.open(AppStoreLink)}>
                             <Styles.LinkImage src={AppStore} alt='App Store' />
                         </Styles.LinkButton>
                         <Styles.LinkButton
