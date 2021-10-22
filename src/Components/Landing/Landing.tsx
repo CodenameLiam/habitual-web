@@ -1,4 +1,4 @@
-import { AppStoreLink } from 'Assets/Apps';
+import { AppStoreLink, PlayStoreLink } from 'Assets/Apps';
 import { FC } from 'react';
 import Reveal, { Fade } from 'react-awesome-reveal';
 import { AppStore, GooglePlay } from '../../Assets/Assets';
@@ -27,7 +27,7 @@ const Landing: FC = () => {
                         </Styles.LinkButton>
                         <Styles.LinkButton
                             aria-label='Google Play Store Link'
-                            onClick={() => window.open('https://liampercy.com')}>
+                            onClick={() => window.open(PlayStoreLink)}>
                             <Styles.LinkImage src={GooglePlay} alt='Google Play Store' />
                         </Styles.LinkButton>
                     </Styles.LinkContainer>

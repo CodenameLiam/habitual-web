@@ -19,7 +19,7 @@ import Habit from 'Components/Habit/Habit';
 import * as Styles from 'Components/Landing/Landing.styles';
 import Reveal from 'react-awesome-reveal';
 import { fadeUp } from 'Styles/Animations';
-import { AppStoreLink } from 'Assets/Apps';
+import { AppStoreLink, PlayStoreLink } from 'Assets/Apps';
 
 const Home = () => {
     return (
@@ -91,7 +91,7 @@ const Home = () => {
                             </Styles.LinkButton>
                             <Styles.LinkButton
                                 aria-label='Google Play Store Link'
-                                onClick={() => window.open('https://liampercy.com')}>
+                                onClick={() => window.open(PlayStoreLink)}>
                                 <Styles.LinkImage src={GooglePlay} alt='Google Play Store' />
                             </Styles.LinkButton>
                         </Styles.LinkContainer>
