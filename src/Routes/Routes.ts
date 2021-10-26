@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import Home from 'Pages/Home/Home';
-import CommingSoon from 'Components/ComingSoon/CommingSoon';
+import ComingSoon from 'Components/ComingSoon/CommingSoon';
 import PrivacyPolicy from 'Pages/Privacy/PrivacyPolicy';
 import Support from 'Pages/Support/Support';
 
@@ -24,12 +24,12 @@ const Routes: RouteRecord = {
     RequestHome: {
         title: 'Feature Requests.',
         path: '/request',
-        component: CommingSoon,
+        component: ComingSoon,
     },
     Request: {
         title: 'Feature Requests.',
         path: '/request/:feature',
-        component: CommingSoon,
+        component: ComingSoon,
     },
     Support: {
         title: 'Support.',
@@ -39,7 +39,7 @@ const Routes: RouteRecord = {
     Login: {
         title: 'Login.',
         path: '/login',
-        component: CommingSoon,
+        component: ComingSoon,
     },
     Privacy: {
         title: 'Privacy Policy.',
